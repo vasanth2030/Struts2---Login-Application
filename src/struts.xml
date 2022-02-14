@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="signup">
+			<result>/signup.jsp</result>
+		</action>
+		
+		<action name="login">
+			<result>/login.jsp</result>
+		</action>
+
+		<action name="loginEval" class="com.vasanth.action.LoginAction">
+			<result name="success">/user/welcome.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+
+		<action name="signupEval"
+			class="com.vasanth.action.SignupAction">
+			<result name="success">/user/welcome.jsp</result>
+			<result name="input">/signup.jsp</result>
+		</action>
+
+	</package>
+
+</struts>
